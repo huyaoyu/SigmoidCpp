@@ -1,8 +1,9 @@
 from torch.utils.cpp_extension import load
 
-DispCorrCUDA = load( 
-    name="DispCorrCUDA", 
-    sources=[ "SigmoidCpp.cpp", "SigmoidCpp_Kernel.cu"]
+SigmoidCppCUDA = load( 
+    name="SigmoidCppCUDA", 
+    sources=[ "SigmoidCpp.cpp", "SigmoidCpp_Kernel.cu"],
+    verbose=True
  )
 
-help(DispCorrCUDA)
+help(SigmoidCppCUDA)
